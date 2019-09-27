@@ -9,6 +9,7 @@ namespace AtCoder.Abc
     {
         public static void Main(string[] args)
         {
+            Console.WriteLine("hoge");
         }
     }
 }
