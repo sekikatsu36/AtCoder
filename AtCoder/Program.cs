@@ -35,12 +35,14 @@ namespace AtCoder
 
             // 整数の入力
             int n = int.Parse(Console.ReadLine());
+            long nl = long.Parse(Console.ReadLine());
 
             // 文字列配列の入力
             string[] inputStrArray = Console.ReadLine().Split(' ');
 
             // 整数配列の入力
             var inputIntArray = Console.ReadLine().Split(' ').Select(i => int.Parse(i));
+            var inputLongArray = Console.ReadLine().Split(' ').Select(i => long.Parse(i));
         }
 
         public void Output()
