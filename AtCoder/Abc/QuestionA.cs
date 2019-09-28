@@ -13,13 +13,13 @@ namespace AtCoder.Abc
             int n = int.Parse(Console.ReadLine());
 
             // 整数配列の入力
-            var aArray = Console.ReadLine().Split(' ').Select(i => int.Parse(i));
-            var sortedArray = aArray.OrderBy(a => a);
+            var aArray = Console.ReadLine().Split(' ').Select(i => long.Parse(i)).ToList();
+            aArray.Sort();
 
             long result = long.MaxValue;
             for(int i = 0; i < n; i++)
             {
-                int tmp = sortedArray.ElementAt(i + n) - sortedArray.ElementAt(i);
+                long tmp = aArray.ElementAt(i + n) - aArray.ElementAt(i);
                 if(tmp < result)
                 {
                     result = tmp;
