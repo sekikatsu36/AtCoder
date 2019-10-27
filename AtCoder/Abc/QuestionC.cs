@@ -10,7 +10,25 @@ namespace AtCoder.Abc
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("hoge");
+            // 整数の入力
+            int n = int.Parse(Console.ReadLine());
+
+            // 文字列の入力
+            string s = Console.ReadLine();
+
+            char current = '%';
+            long result = 0;
+            foreach(char c in s)
+            {
+                if(c == current)
+                {
+                    continue;
+                }
+                result++;
+                current = c;
+            }
+
+            Console.WriteLine(result);
         }
     }
 }
