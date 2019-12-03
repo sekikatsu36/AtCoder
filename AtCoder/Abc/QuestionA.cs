@@ -11,6 +11,9 @@ namespace AtCoder.Abc
     {
         public static void Main(string[] args)
         {
+            var sw = new System.IO.StreamWriter(Console.OpenStandardOutput()) { AutoFlush = false };
+            Console.SetOut(sw);
+
             // 文字列の入力
             string s = Console.ReadLine();
 
@@ -21,12 +24,14 @@ namespace AtCoder.Abc
             string[] inputStrArray = Console.ReadLine().Split(' ');
 
             // 整数配列の入力
-            long[] inputLongArray = Console.ReadLine().Split(' ').Select(i => long.Parse(i)).ToArray();
+            var inputLongArray = Console.ReadLine().Split(' ').Select(i => long.Parse(i)).ToArray();
 
-            var sw = new System.IO.StreamWriter(Console.OpenStandardOutput()) { AutoFlush = false };
-            Console.SetOut(sw);
 
-            Console.WriteLine("hoge");
+
+
+            string result = "";
+
+            Console.WriteLine(result);
 
             Console.Out.Flush();
         }

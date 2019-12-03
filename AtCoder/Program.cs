@@ -11,10 +11,11 @@ namespace AtCoder
     {
         static void Main(string[] args)
         {
-            while(true)
+            while (true)
             {
                 Exec(args);
                 Console.WriteLine("============ Retry ============");
+                Console.Out.Flush();
             }
         }
 
@@ -22,8 +23,6 @@ namespace AtCoder
         {
             QuestionA
                 .Main(args);
-
-
         }
     }
 }

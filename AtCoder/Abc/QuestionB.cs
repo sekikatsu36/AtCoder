@@ -10,6 +10,9 @@ namespace AtCoder.Abc
     {
         public static void Main(string[] args)
         {
+            var sw = new System.IO.StreamWriter(Console.OpenStandardOutput()) { AutoFlush = false };
+            Console.SetOut(sw);
+
             // 文字列の入力
             string s = Console.ReadLine();
 
@@ -24,7 +27,12 @@ namespace AtCoder.Abc
 
 
 
-            Console.WriteLine("hoge");
+
+            string result = "";
+
+            Console.WriteLine(result);
+
+            Console.Out.Flush();
         }
     }
 }
