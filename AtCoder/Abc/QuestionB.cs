@@ -10,26 +10,31 @@ namespace AtCoder.Abc
     {
         public static void Main(string[] args)
         {
-            var sw = new System.IO.StreamWriter(Console.OpenStandardOutput()) { AutoFlush = false };
-            Console.SetOut(sw);
-
-            // 文字列の入力
-            string s = Console.ReadLine();
-
-            // 整数の入力
-            long n = long.Parse(Console.ReadLine());
-
-            // 文字列配列の入力
-            string[] inputStrArray = Console.ReadLine().Split(' ');
-
             // 整数配列の入力
             var inputLongArray = Console.ReadLine().Split(' ').Select(i => long.Parse(i)).ToArray();
 
+            long a = inputLongArray[0];
+            long b = inputLongArray[1];
 
-
-
-            string result = "";
-
+            long result = 0;
+            long tmp = 1;
+            if (a < b)
+            {
+                for (int i = 0; i < b; i++)
+                {
+                    result += tmp * a;
+                    tmp *= 10;
+                }
+            }
+            else
+            {
+                for (int i = 0; i < a; i++)
+                {
+                    result += tmp * b;
+                    tmp *= 10;
+                }
+            }
+            
             Console.WriteLine(result);
 
             Console.Out.Flush();
