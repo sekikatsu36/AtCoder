@@ -6,6 +6,33 @@ using System.Threading.Tasks;
 
 namespace AtCoder.Lib
 {
+    public class Element : IComparable
+    {
+        public long X { get; set; }
+        public long Y { get; set; }
+
+        public Element(long[] input)
+        {
+            this.X = input[0];
+            this.Y = input[1];
+        }
+        public Element(long x, long y)
+        {
+            this.X = x;
+            this.Y = y;
+        }
+
+        public int CompareTo(object obj)
+        {
+            //Xの低い順にソートされる
+            return (int)(X - (obj as Element).X);
+
+
+            //Yの高い順にソートされる
+            //return (int)((obj as Element).Y - Y);
+        }
+    }
+
     /// <summary>
     /// 優先度付きキュー。
     /// 出展：https://github.com/yambe2002/topcoder_template/blob/master/MyLibrary.cs

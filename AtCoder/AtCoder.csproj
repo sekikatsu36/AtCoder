@@ -53,6 +53,7 @@
     <Compile Include="Abc\QuestionD.cs" />
     <Compile Include="Abc\QuestionE.cs" />
     <Compile Include="Abc\QuestionF.cs" />
+    <Compile Include="Lib\Calc.cs" />
     <Compile Include="Lib\PrimeFactors.cs" />
     <Compile Include="Lib\PriorityQueue.cs" />
     <Compile Include="Program.cs" />
