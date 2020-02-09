@@ -29,7 +29,7 @@ namespace AtCoder
         {
             public static void Log(string message)
             {
-                Console.WriteLine("DEBUG:" + message);
+                Console.WriteLine("DEBUG: " + message);
             }
         }
     }
