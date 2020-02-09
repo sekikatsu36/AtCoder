@@ -12,25 +12,37 @@ namespace AtCoder.Abc
         {
             var sw = new System.IO.StreamWriter(Console.OpenStandardOutput()) { AutoFlush = false };
             Console.SetOut(sw);
-
-            // 文字列の入力
-            string s = Console.ReadLine();
-
-            // 整数の入力
-            long n = long.Parse(Console.ReadLine());
-
-            // 文字列配列の入力
-            string[] inputStrArray = Console.ReadLine().Split(' ');
-
+            
             // 整数配列の入力
             var inputLongArray = Console.ReadLine().Split(' ').Select(i => long.Parse(i)).ToArray();
+            long n = inputLongArray[0];
+            long k = inputLongArray[1];
 
+            // 整数配列の入力(期待値*10に変換してしまう)
+            var pArray = Console.ReadLine().Split(' ').Select(i => (long.Parse(i) + 1) * 5).ToArray();
 
+            //とりあえず、1からK番目までの合計を出す
+            long max = 0;
+            for(long i = 0; i < k; i++)
+            {
+                max += pArray[i];
+            }
+            long current = max;
+            //Program.Debug.Log($"{k-1} -> {max}");
 
+            //最小を探す
+            for (long i = k; i < n; i++)
+            {
+                long tmp = current + pArray[i] - pArray[i - k];
+                //Program.Debug.Log($"{i}: {current} + {pArray[i]} - {pArray[i - k]} -> {tmp}");
+                current = tmp;
+                if(current > max)
+                {
+                    max = current;
+                }
+            }
 
-            string result = "";
-
-            Console.WriteLine(result);
+            Console.WriteLine(max / 10f);
 
             Console.Out.Flush();
         }
