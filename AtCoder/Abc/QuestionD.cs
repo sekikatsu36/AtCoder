@@ -13,19 +13,13 @@ namespace AtCoder.Abc
             var sw = new System.IO.StreamWriter(Console.OpenStandardOutput()) { AutoFlush = false };
             Console.SetOut(sw);
 
-            // 文字列の入力
-            string s = Console.ReadLine();
-
-            // 整数の入力
-            long n = long.Parse(Console.ReadLine());
-
-            // 文字列配列の入力
-            string[] inputStrArray = Console.ReadLine().Split(' ');
-
             // 整数配列の入力
             var inputLongArray = Console.ReadLine().Split(' ').Select(i => long.Parse(i)).ToArray();
+            long n = inputLongArray[0];
+            long k = inputLongArray[1];
 
-
+            // 整数配列の入力
+            var aArray = Console.ReadLine().Split(' ').Select(i => long.Parse(i)).ToArray();
 
 
             string result = "";
@@ -33,6 +27,22 @@ namespace AtCoder.Abc
             Console.WriteLine(result);
 
             Console.Out.Flush();
+        }
+
+        public static void Test(long k, long[] aArray)
+        {
+            if(aArray.Length <= 2)
+            {
+
+            }
+
+            long index = aArray.Length / 2;
+
+            //if(aArray[index] * aArray[index + 1] < )
+
+            ////とりあえずaArrayを半分に切る
+            //var fist = aArray.Take(aArray.Length / 2);
+            //var second = 
         }
     }
 }

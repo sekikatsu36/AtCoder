@@ -13,24 +13,47 @@ namespace AtCoder.Abc
             var sw = new System.IO.StreamWriter(Console.OpenStandardOutput()) { AutoFlush = false };
             Console.SetOut(sw);
 
-            // 文字列の入力
-            string s = Console.ReadLine();
-
             // 整数の入力
             long n = long.Parse(Console.ReadLine());
 
-            // 文字列配列の入力
-            string[] inputStrArray = Console.ReadLine().Split(' ');
+            long count = 0;
 
-            // 整数配列の入力
-            var inputLongArray = Console.ReadLine().Split(' ').Select(i => long.Parse(i)).ToArray();
+            Dictionary<string, long> dic = new Dictionary<string, long>();
+            for (int i = 0; i < n; i++)
+            {
+                // 文字列の入力
+                string s = Console.ReadLine();
 
+                if (dic.ContainsKey(s))
+                {
+                    dic[s]++;
+                }
+                else
+                {
+                    dic.Add(s, 1);
+                }
 
+                if (dic[s] > count)
+                {
+                    count = dic[s];
+                }
+            }
 
+            List<string> results = new List<string>();
+            foreach (var kv in dic)
+            {
+                if (kv.Value == count)
+                {
+                    results.Add(kv.Key);
+                }
+            }
 
-            string result = "";
+            results.Sort(StringComparer.OrdinalIgnoreCase);
 
-            Console.WriteLine(result);
+            foreach (var result in results)
+            {
+                Console.WriteLine(result);
+            }
 
             Console.Out.Flush();
         }

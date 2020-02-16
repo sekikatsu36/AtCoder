@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AtCoder.Abc
 {
-    //https://atcoder.jp/contests/abc141/tasks/abc141_a
+    //https://atcoder.jp/contests/abc155/tasks/abc155_a
     public class QuestionA
     {
         public static void Main(string[] args)
@@ -14,24 +14,37 @@ namespace AtCoder.Abc
             var sw = new System.IO.StreamWriter(Console.OpenStandardOutput()) { AutoFlush = false };
             Console.SetOut(sw);
 
-            // 文字列の入力
-            string s = Console.ReadLine();
-
-            // 整数の入力
-            long n = long.Parse(Console.ReadLine());
-
-            // 文字列配列の入力
-            string[] inputStrArray = Console.ReadLine().Split(' ');
-
-            // 整数配列の入力
             var inputLongArray = Console.ReadLine().Split(' ').Select(i => long.Parse(i)).ToArray();
+            long a = inputLongArray[0];
+            long b = inputLongArray[1];
+            long c = inputLongArray[2];
 
-
-
-
-            string result = "";
-
-            Console.WriteLine(result);
+            if(a == b)
+            {
+                if(b == c)
+                {
+                    Console.WriteLine("No");
+                }
+                else
+                {
+                    Console.WriteLine("Yes");
+                }
+            }
+            else
+            {
+                if(b == c && a != c)
+                {
+                    Console.WriteLine("Yes");
+                }
+                else if (b != c && a == c)
+                {
+                    Console.WriteLine("Yes");
+                }
+                else
+                {
+                    Console.WriteLine("No");
+                }
+            }
 
             Console.Out.Flush();
         }

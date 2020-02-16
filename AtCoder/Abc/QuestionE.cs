@@ -13,26 +13,32 @@ namespace AtCoder.Abc
             var sw = new System.IO.StreamWriter(Console.OpenStandardOutput()) { AutoFlush = false };
             Console.SetOut(sw);
 
-            // 文字列の入力
-            string s = Console.ReadLine();
+            //// 整数の入力
+            //string nStr = Console.ReadLine();
 
-            // 整数の入力
-            long n = long.Parse(Console.ReadLine());
+            //for (int i = 0; i < pay.ToString().Length; i++)
+            //{                
+            //    char c = pay.ToString()[pay.ToString().Length - i - 1];
+            //    int intC = int.Parse(c.ToString());
+            //    if(intC > 5)
+            //    {
+            //        pay += (int)((10 - intC) * Math.Pow(10, i));
 
-            // 文字列配列の入力
-            string[] inputStrArray = Console.ReadLine().Split(' ');
-
-            // 整数配列の入力
-            var inputLongArray = Console.ReadLine().Split(' ').Select(i => long.Parse(i)).ToArray();
+            //        Program.Debug.Log($"pay: {pay}");
+            //    }
+            //}
 
 
+            //string result = "";
 
+            //Console.WriteLine(result);
 
-            string result = "";
+            //Console.Out.Flush();
+        }
 
-            Console.WriteLine(result);
+        public static void Test(long target, long index)
+        {
 
-            Console.Out.Flush();
         }
     }
 }
